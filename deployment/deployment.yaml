@@ -13,10 +13,10 @@ spec:
     metadata:
       labels:
         app: my-flask-app
-    specs:
-      container:
+    spec:
+      containers:
       - name: my-flask-app
         image: shizzyctrl/my-flask-app:latest 
         ports:
         - containerPort: 5000
-        imagePullPolicy: Always  
+        imagePullPolicy: Always
