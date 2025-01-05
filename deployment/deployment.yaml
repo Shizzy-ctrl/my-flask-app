@@ -13,10 +13,15 @@ spec:
     metadata:
       labels:
         app: my-flask-app
+      annotations:
+        redeploy-timestamp: "{{now}}"
     spec:
       containers:
       - name: my-flask-app
         image: shizzyctrl/my-flask-app:latest
-        ports:
-        - containerPort: 5000
         imagePullPolicy: Always
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 1
