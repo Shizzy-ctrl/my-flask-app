@@ -27,4 +27,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: shizzyctrl/my-flask-app:latest
+        tags: shizzyctrl/my-flask-app:${{ github.run_number }}
