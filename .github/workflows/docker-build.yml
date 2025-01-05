@@ -27,4 +27,4 @@ jobs:
       with:
         context: .
         push: true
-        tags: shizzyctrl/my-flask-app:${{ env.VERSION }}
+        tags: shizzyctrl/my-flask-app:latest
