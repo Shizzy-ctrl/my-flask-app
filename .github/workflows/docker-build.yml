@@ -27,4 +27,14 @@ jobs:
       with:
         context: .
         push: true
-        tags: shizzyctrl/my-flask-app:latest
+        tags: shizzyctrl/my-flask-app:${{ github.sha }}
+
+    - name: Update values.yaml
+      run: |
+        cd helm
+        sed -i 's|APP_VERSION:.*|APP_VERSION: '${{ github.sha }}'|' values.yaml 
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'actions@github.com'
+        git add values.yaml
+        git commit -m "Update values.yaml"
+        git push origin main
