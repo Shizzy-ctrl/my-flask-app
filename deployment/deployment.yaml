@@ -13,8 +13,6 @@ spec:
     metadata:
       labels:
         app: my-flask-app
-      annotations:
-        redeploy-timestamp: "{{now}}"
     spec:
       containers:
       - name: my-flask-app
