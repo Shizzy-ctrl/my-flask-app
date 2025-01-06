@@ -5,5 +5,3 @@
 ## During updates, ArgoCD keeps one pod running the older version until the new version is fully created and ready.
 
 ![obraz](https://github.com/user-attachments/assets/ed465611-e2c4-4668-81b2-857f25686fb1)
-
-test
