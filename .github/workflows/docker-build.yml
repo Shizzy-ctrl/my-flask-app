@@ -4,6 +4,8 @@ on:
   push:
     branches:
       - main
+    paths:
+      - app.py  # Trigger workflow only when app.py is modified
 
 jobs:
   build:
